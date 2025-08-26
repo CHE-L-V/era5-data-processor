@@ -1,0 +1,19 @@
+{
+  "name": "era5-download-project",
+  "version": "1.0.0",
+  "description": "ERA5数据下载和处理项目",
+  "main": "automated_era5_workflow.py",
+  "scripts": {
+    "download": "python automated_era5_workflow.py",
+    "split": "wsl -e bash ./split_era5.sh",
+    "test-wsl": "wsl -e bash ./test_wsl_env.sh",
+    "workflow": "python automated_era5_workflow.py && wsl -e bash ./split_era5.sh"
+  },
+  "keywords": ["ERA5", "CDS", "climate", "data", "download"],
+  "author": "ERA5 Workflow Developer",
+  "license": "MIT",
+  "dependencies": {
+    "cdsapi": "^0.7.0"
+  },
+  "devDependencies": {}
+}
